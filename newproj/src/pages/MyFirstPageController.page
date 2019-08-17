@@ -1,0 +1,10 @@
+<apex:page controller="GettersetterMethod" >
+    <apex:form >
+        The logged in user is {! $User.FirstName} <br/>
+     The logged in Profiile  is {! $Profile.Name}          
+        His Friend is <apex:inputText value="{! name}"/>
+        <apex:commandButton value="refresh"/>
+        <apex:outputText value="{! name }" id="op1"/>
+        
+    </apex:form>
+</apex:page>

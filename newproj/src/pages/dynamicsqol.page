@@ -1,0 +1,25 @@
+<apex:page controller="dynamicsqol">
+    <apex:form >
+    <apex:pageblock >
+        
+        <apex:pageBlockSection >
+            
+           Opportunity Name <apex:inputText value="{!optyname}"/>
+           Opportunity Stage<apex:inputText value="{!optystage}"/> 	
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="search" action="{!fecthopty}" reRender="pb1"/>
+        </apex:pageBlockButtons>
+    </apex:pageblock>
+    
+    <apex:pageblock id="pb1">
+        <apex:pageBlockTable value="{! optylist}" var="o" >
+            <apex:column value="{!o.name}"/>
+            <apex:column value="{!o.StageName}"/>
+            <apex:column value="{!o.CloseDate}"/>  
+            
+        </apex:pageBlockTable>
+        
+    </apex:pageblock>
+        </apex:form>
+</apex:page>

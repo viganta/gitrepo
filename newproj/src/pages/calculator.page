@@ -1,0 +1,19 @@
+<apex:page Controller="calc" >
+    <apex:form >
+        <apex:pageBlock title="Block A">
+            <apex:pageBlockSection title="Render Section">
+                <apex:inputText value="{!x}" label="input1"/> 
+                <apex:inputText value="{!y}" label="input2"/>
+                
+            </apex:pageBlockSection>
+            <apex:outputPanel id="nani">
+                <apex:pageBlockSection title="Block B"  rendered="{!flag}" >
+                    <apex:outputText value="{!z}" label="output"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:pageBlockSection >
+                <apex:commandButton value="+" action="{!add}" rerender="nani" />
+            </apex:pageBlockSection>       
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

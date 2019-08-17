@@ -1,0 +1,14 @@
+<apex:page Controller="soql" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!acclist}" var="a">
+                <apex:column value="{!a.Name}" headerValue="Name"/>
+                <apex:column value="{!a.Phone}" headerValue="Phone"/>
+                <apex:column value="{!a.Fax}" headerValue="Fax"/>    
+            </apex:pageBlockTable>
+          <apex:pageBlockButtons > 
+                <apex:commandButton value="Show Table" action="{!soql}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

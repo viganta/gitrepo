@@ -1,0 +1,20 @@
+<apex:page Controller="buttonapex" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputPanel id="ab">
+                <apex:pageBlockSection title="Block A" rendered="{!showa}">
+                    <apex:outputText value="{Account values are inserted}" />   
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel id="bc">
+                <apex:pageBlockSection title="Block B"  rendered="{!showb}" >
+                    <apex:outputText value="{Contact Values are inserted}" />
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:pageBlockSection >
+                <apex:commandButton value="Insert Acc" action="{!blocka}" onclick="https://ap.salesforce.com/001/o" />
+                <apex:commandButton value="Insert Con" action="{!blockb}" rerender="bc" />
+            </apex:pageBlockSection>       
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

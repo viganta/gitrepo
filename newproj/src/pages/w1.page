@@ -1,0 +1,21 @@
+<apex:page controller="w1">
+    <apex:form >
+        <apex:pageblock >
+            <apex:commandbutton value="Show Selected Accounts" action="{!selected}" rerender="id1" />
+            <apex:pageblockSection title="All Accounts" >
+                <apex:pageblocktable value="{!wrapAccountList}" var="wl" >
+                    <apex:column value="{!wl.acc.name}"/>
+                    <apex:column value="{!wl.acc.billingstate}"/>
+                    <apex:column >
+                        <apex:inputcheckbox value="{!wl.selected}" />
+                    </apex:column>
+                </apex:pageblocktable>
+                
+                <apex:pageblocktable value="{!selectedAccounts}" var="sl"  id="id1" >
+                    <apex:column value="{!sl.name}"/>
+                    <apex:column value="{!sl.billingstate}"/>
+                </apex:pageblocktable>
+            </apex:pageblockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

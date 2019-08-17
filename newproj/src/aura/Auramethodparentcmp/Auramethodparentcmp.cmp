@@ -1,0 +1,9 @@
+<aura:component >
+     
+    <aura:attribute name="message" type="String" />
+    <c.Auramethodchildcmp onclick1="{!c.handleclick}" />
+    <lightning:button name="invokechild" label="invokechild" onclick ="{!c.doclick}" />
+
+    {!v.message}
+    
+</aura:component>

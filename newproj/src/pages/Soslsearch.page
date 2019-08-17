@@ -1,0 +1,37 @@
+<apex:page controller="Soslsearch">
+    <apex:form >
+        <apex:pageblock >
+            
+            <apex:pageBlockSection >
+                
+                Name <apex:inputText value="{!name}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="search" action="{!fecthrec}" reRender="pb1,pb2,pb3"/>
+            </apex:pageBlockButtons>
+        </apex:pageblock>
+        
+        <apex:pageblock id="pb4">
+            <apex:pageBlockTable value="{! optylist}" var="o" >
+                <apex:column value="{!o.name}"/>
+                <apex:column value="{!o.StageName}"/>
+                <apex:column value="{!o.CloseDate}"/>  
+            </apex:pageBlockTable>
+        </apex:pageblock>
+        
+        <apex:pageblock id="pb2">
+            <apex:pageblocktable value="{!acclist}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.type}" />
+                <apex:column value="{!a.industry}" />
+            </apex:pageblocktable>
+        </apex:pageblock>
+        <apex:pageblock id="pb3">
+            <apex:pageblocktable value="{!conlist}" var="c">
+                <apex:column value="{!c.firstname}"/>
+                <apex:column value="{!c.lastname}"/>
+                <apex:column value="{!c.email}"/>
+            </apex:pageblocktable>
+        </apex:pageblock>               
+    </apex:form>
+</apex:page>

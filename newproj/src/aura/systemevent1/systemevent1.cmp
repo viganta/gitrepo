@@ -1,0 +1,7 @@
+<aura:component >
+    
+    <aura:attribute name="text" type="String" />	
+    <aura:handler name="change" value="{!v.text}" action ="{!c.doaction}" />
+    <lightning:button label="litbut" onclick="{!c.dochange}" />
+	
+</aura:component>

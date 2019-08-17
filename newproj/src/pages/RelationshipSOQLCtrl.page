@@ -1,0 +1,14 @@
+<apex:page controller="RelationshipSOQLCtrl">
+   <apex:form >
+       <apex:pageBlock >
+       <apex:pageBlockTable value="{!conList }" var="c">
+        <apex:column value="{! c.LastName}" />
+        <apex:column value="{! c.Firstname}" />
+        <apex:column value="{! c.Email}" />
+        <apex:column value="{! c.Account.Name}" />
+        <apex:column value="{! c.Account.Type}" />
+        <apex:column value="{! c.Account.Industry}" />
+    </apex:pageBlockTable>
+           </apex:pageBlock>
+       </apex:form>
+</apex:page>

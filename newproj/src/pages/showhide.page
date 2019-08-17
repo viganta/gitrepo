@@ -1,0 +1,20 @@
+<apex:page Controller="showhideval" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputPanel id="ab">
+                <apex:pageBlockSection title="Block A" rendered="{!showa}">
+                    <apex:outputText value="{This is BLOCK A}" />   
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel id="bc">
+                <apex:pageBlockSection title="Block B"  rendered="{!showb}" >
+                    <apex:outputText value="{This is BLOCK B}" />
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:pageBlockSection >
+                <apex:commandButton value="Show A" action="{!blocka}" rerender="ab" />
+                <apex:commandButton value="Show B" action="{!blockb}" rerender="bc" />
+            </apex:pageBlockSection>       
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

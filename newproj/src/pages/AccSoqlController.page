@@ -1,0 +1,11 @@
+<apex:page controller="AccSoqlController">
+    <apex:form >
+        <apex:pageBlock >
+        <apex:pageBlockTable value="{!acclist}" var="a">
+            <apex:column value="{! a.name}"/>
+             <apex:column value="{! a.Industry}"/>
+             <apex:column value="{! a.Type}"/>
+        </apex:pageBlockTable> 
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

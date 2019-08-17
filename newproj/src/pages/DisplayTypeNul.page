@@ -1,0 +1,13 @@
+<apex:page controller="DisplayTypeNul" >
+    <apex:form >
+    <apex:pageblock >
+
+        <apex:pageBlockTable value="{!acclist}" var="a">
+            <apex:column value="{!a.name}" />
+            <apex:column value="{!a.Industry}" />                   
+            <apex:column value="{!a.type}" /> 
+            
+        </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

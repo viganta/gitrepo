@@ -1,0 +1,15 @@
+<apex:page standardcontroller="contact" recordsetvar="contacts">
+     <apex:slds />
+    <apex:pageblock >
+
+
+        <apex:repeat value="{!contacts}" var="c" >
+            <dl class="slds-list_horizontal slds-wrap">
+            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label"> {!c.name} </dt>
+            <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">{!c.phone} </dt>
+                </dl>
+        </apex:repeat>
+   
+    </apex:pageblock>
+   
+</apex:page>

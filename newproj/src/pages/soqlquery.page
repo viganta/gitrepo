@@ -1,0 +1,21 @@
+<apex:page controller="soqlquery">
+    <apex:pageBlock >
+        
+        <apex:pageBlockTable value="{!conlist}" var="c">
+            <apex:column value="{!c.lastname}"/>
+            <apex:column value="{!c.firstname}"/>
+            <apex:column value="{!c.account.name}"/>
+            <apex:column value="{!c.account.type}"/> 
+        </apex:pageBlockTable>
+        <apex:pageBlockTable value="{!acclist}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.type}"/>
+            <apex:column value="{!a.industry}"/>
+            <apex:repeat value="{!a.contacts}" var="d">
+            <apex:column value="{!d.lastname}"/>
+            <apex:column value="{!d.firstname}"/>
+                        <apex:column value="{!d.email}"/>
+                </apex:repeat>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
